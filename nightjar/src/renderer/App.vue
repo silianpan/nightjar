@@ -6,8 +6,8 @@
 
 <script>
   export default {
-    name: 'nightjar'
-  }
+    name: 'nightjar',
+  };
 </script>
 
 <style>
