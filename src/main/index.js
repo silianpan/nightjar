@@ -29,7 +29,8 @@ function createWindow() {
     skipTaskbar: false,
     frame: true,
     autoHideMenuBar: true,
-    title: '智影未来二维码桌面扫描版'
+    title: '智影未来二维码桌面扫描版',
+    fullscreen: true
   });
 
   mainWindow.loadURL(winURL);

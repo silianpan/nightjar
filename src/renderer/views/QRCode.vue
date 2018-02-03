@@ -6,8 +6,8 @@
   </Input>
   <webview :src="webviewUrl" autosize="on" style="width:100vw;height:100vh"></webview>
   <Spin fix v-if="isScaning">
-    <Icon type="load-c" size=20 class="demo-spin-icon-load"></Icon>
-    <div>等待扫描中...</div>
+    <Icon type="load-c" size=100 class="demo-spin-icon-load"></Icon>
+    <div style="font-size:100px">等待扫描中...</div>
   </Spin>
 </div>
 </template>
