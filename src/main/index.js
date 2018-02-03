@@ -27,6 +27,8 @@ function createWindow() {
     useContentSize: true,
     width: width,
     skipTaskbar: false,
+    frame: true,
+    autoHideMenuBar: true
   });
 
   mainWindow.loadURL(winURL);
@@ -35,9 +37,19 @@ function createWindow() {
     mainWindow = null;
   });
 
+  mainWindow.on('minimize', function() {
+    //minimize 可自己随意定义
+    mainWindow.hide()
+  });
+
   // 快捷键
   globalShortcut.register('Alt+X', () => {
-    mainWindow.show();
+    // 窗口是否可见
+    if (mainWindow.isVisible()) {
+      mainWindow.hide();
+    } else {
+      mainWindow.show();
+    }
   })
 
   //系统托盘右键菜单
@@ -67,14 +79,10 @@ function createWindow() {
     mainWindow.show();
   });
 
-  ipcMain.on('closeWindow', function() {
-    // closeWindow  可自己随意定义
-    app.quit()
-  });
-  ipcMain.on('minimize', function() {
-    //minimize 可自己随意定义
-    mainWindow.hide()
-  });
+  // ipcMain.on('closeWindow', function() {
+  //   // closeWindow  可自己随意定义
+  //   app.quit()
+  // });
 }
 
 app.on('ready', createWindow);
