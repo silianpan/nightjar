@@ -7,8 +7,8 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'landing-page',
-      component: require('@/components/LandingPage').default,
+      name: 'QRCode',
+      component: require('@/views/QRCode').default,
     },
     {
       path: '*',
