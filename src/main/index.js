@@ -56,10 +56,22 @@ function createWindow() {
   //系统托盘右键菜单
   var trayMenuTemplate = [
     {
+      label: '智影未来二维码桌面扫描版',
+      click: function () {
+        mainWindow.show();
+      }
+    },
+    {
+      label: '最小化',
+      click: function () {
+        mainWindow.minimize();
+      }
+    },
+    {
         label: '退出',
         click: function () {
-            //ipc.send('close-main-window');
-             app.quit();
+          //ipc.send('close-main-window');
+          app.quit();
         }
     }
   ];
