@@ -28,7 +28,8 @@ function createWindow() {
     width: width,
     skipTaskbar: false,
     frame: true,
-    autoHideMenuBar: true
+    autoHideMenuBar: true,
+    title: '智影未来二维码桌面扫描版'
   });
 
   mainWindow.loadURL(winURL);

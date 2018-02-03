@@ -22,7 +22,7 @@
     "postinstall": "npm run lint:fix"
   },
   "build": {
-    "productName": "nightjar",
+    "productName": "智影未来二维码桌面扫描版",
     "appId": "org.simulatedgreg.electron-vue",
     "directories": {
       "output": "build"
