@@ -1,6 +1,6 @@
 <template>
-<div>
-  <Input v-model="value" placeholder="Enter something..." style="width: 300px"
+<div class="qrcode">
+  <Input v-model="value" placeholder="等待扫描输入...." style="width: 300px"
     :autofocus="true"
     @on-enter="enterClick">
   </Input>
@@ -26,3 +26,7 @@ export default {
   }
 }
 </script>
+
+<style lang="less">
+@import './qrCode.less';
+</style>
