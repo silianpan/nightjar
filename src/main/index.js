@@ -83,7 +83,7 @@ function createWindow() {
   const contextMenu = Menu.buildFromTemplate(trayMenuTemplate);
 
   //设置此托盘图标的悬停提示内容
-  appTray.setToolTip('QR Code Scan Tool');
+  appTray.setToolTip('智影未来二维码桌面扫描版');
 
   //设置此图标的上下文菜单
   appTray.setContextMenu(contextMenu);

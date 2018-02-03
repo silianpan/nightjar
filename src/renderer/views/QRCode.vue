@@ -5,6 +5,10 @@
     @on-enter="enterClick">
   </Input>
   <webview :src="webviewUrl" autosize="on" style="width:100vw;height:100vh"></webview>
+  <Spin fix v-if="isScaning">
+    <Icon type="load-c" size=20 class="demo-spin-icon-load"></Icon>
+    <div>等待扫描中...</div>
+  </Spin>
 </div>
 </template>
 
@@ -13,7 +17,9 @@ export default {
   data() {
     return {
       value: '',
-      webviewUrl: ''
+      webviewUrl: '',
+      spinShow: true,
+      isScaning: false
     }
   },
   mounted() {
@@ -21,8 +27,11 @@ export default {
   methods: {
     enterClick() {
       // this.open(this.value)
+      this.isScaning = true
       this.webviewUrl = this.value
       this.value = ''
+
+      setTimeout(() => {this.isScaning = false}, 1000)
     },
     open(link) {
       this.$electron.shell.openExternal(link);
