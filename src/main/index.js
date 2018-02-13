@@ -54,44 +54,44 @@ function createWindow() {
     }
   })
 
-  //系统托盘右键菜单
-  var trayMenuTemplate = [
-    {
-      label: '智影未来二维码桌面扫描版',
-      click: function () {
-        mainWindow.show();
-      }
-    },
-    {
-      label: '最小化',
-      click: function () {
-        mainWindow.minimize();
-      }
-    },
-    {
-        label: '退出',
-        click: function () {
-          //ipc.send('close-main-window');
-          app.quit();
-        }
-    }
-  ];
+  // //系统托盘右键菜单
+  // var trayMenuTemplate = [
+  //   {
+  //     label: '智影未来二维码桌面扫描版',
+  //     click: function () {
+  //       mainWindow.show();
+  //     }
+  //   },
+  //   {
+  //     label: '最小化',
+  //     click: function () {
+  //       mainWindow.minimize();
+  //     }
+  //   },
+  //   {
+  //       label: '退出',
+  //       click: function () {
+  //         //ipc.send('close-main-window');
+  //         app.quit();
+  //       }
+  //   }
+  // ];
 
-  //系统托盘图标目录
-  appTray = new Tray(path.join(__dirname, '../../build/icons/icon.ico'));
+  // //系统托盘图标目录
+  // appTray = new Tray(path.join(__dirname, '../../build/icons/icon.ico'));
 
-  //图标的上下文菜单
-  const contextMenu = Menu.buildFromTemplate(trayMenuTemplate);
+  // //图标的上下文菜单
+  // const contextMenu = Menu.buildFromTemplate(trayMenuTemplate);
 
-  //设置此托盘图标的悬停提示内容
-  appTray.setToolTip('智影未来二维码桌面扫描版');
+  // //设置此托盘图标的悬停提示内容
+  // appTray.setToolTip('智影未来二维码桌面扫描版');
 
-  //设置此图标的上下文菜单
-  appTray.setContextMenu(contextMenu);
+  // //设置此图标的上下文菜单
+  // appTray.setContextMenu(contextMenu);
 
-  appTray.on('click', function () { // 左键单击时显示窗口
-    mainWindow.show();
-  });
+  // appTray.on('click', function () { // 左键单击时显示窗口
+  //   mainWindow.show();
+  // });
 
   // ipcMain.on('closeWindow', function() {
   //   // closeWindow  可自己随意定义
