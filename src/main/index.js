@@ -41,7 +41,7 @@ function createWindow() {
 
   mainWindow.on('minimize', function() {
     //minimize 可自己随意定义
-    mainWindow.hide()
+    // mainWindow.hide()
   });
 
   // 快捷键
@@ -52,9 +52,17 @@ function createWindow() {
     } else {
       mainWindow.show();
     }
+
+    // 窗口最小化切换
+    // if (mainWindow.isMinimized()) {
+    //   mainWindow.maximize();
+    // } 
+    // if (mainWindow.isMaximized()) {
+    //   mainWindow.minimize();
+    // }
   })
 
-  // //系统托盘右键菜单
+  // // windows系统托盘右键菜单
   // var trayMenuTemplate = [
   //   {
   //     label: '智影未来二维码桌面扫描版',
